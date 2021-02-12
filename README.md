@@ -20,7 +20,7 @@ It covers the following fields:
 
 description of the command interpreter:
  
-how to start it
+how to start it:
 
 The command interpreter starts when running ./console.py.
 It can work both in interactive and non interactive mode (see examples).
