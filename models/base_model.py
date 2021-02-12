@@ -20,8 +20,7 @@ class BaseModel:
 
     def __str__(self):
         """
-        print the instance
-        :return:
+        string representation of the BaseModel class
         """
         return ("[{}] ({}) {})".format(
             __class__.__name__,
