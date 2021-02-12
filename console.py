@@ -1,5 +1,5 @@
 import cmd
-from baseModel1 import baseModel1
+from baseModel import baseModel
 
 
 class HBNBcommand(cmd.Cmd):
