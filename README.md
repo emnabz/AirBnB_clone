@@ -1,5 +1,5 @@
 # AirBnB_clone - The console
-
+---
 
 ## Description of the project
 
