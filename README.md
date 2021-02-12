@@ -1,10 +1,11 @@
-AirBnB_clone - The console
+# AirBnB_clone - The console
 
-Description of the project
+## Description of the project
 
 The console is the first segment of the AirBnB project at Holberton School that will collectively cover fundamental concepts of higher level programming. The goal of the project is to deploy on your server a simple copy of the AirBnB website. A command interpreter is created in this segment to manage objects for the AirBnB(HBnB) website.
+---
 
-Installation
+## Installation
 
    * Clone this repository: https://github.com/emnabz/AirBnB_clone.git
    * Access AirBnb directory: cd AirBnB_clone
@@ -17,8 +18,9 @@ It covers the following fields:
    * An API that provides a communication interface between the front-end and your data (retrieve, create, delete, update them)
    * A database or files that store data (data = objects)
    * A command interpreter to manipulate data without a visual interface, like in a Shell (perfect for development and debugging)
+---
 
-description of the command interpreter:
+## Description of the command interpreter:
  
 how to start it:
 
@@ -34,7 +36,8 @@ The following commands have been implemented:
 * show - Prints the string representation of an instance based on the class name and id.
 * all - Prints all string representation of all instances based or not on the class name.
 * update - Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file).
+---
 
-Environment
+## Environment
 
 This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.4.3).
