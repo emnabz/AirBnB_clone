@@ -35,7 +35,6 @@ The following commands have been implemented:
 * show - Prints the string representation of an instance based on the class name and id.
 * all - Prints all string representation of all instances based or not on the class name.
 * update - Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file).
----
 
 ## Environment
 
