@@ -4,19 +4,27 @@ Base module for Air BnB module
 """
 import uuid
 from datetime import datetime
+date = "%Y-%m-%dT%H:%M:%S.%f"
 
 
 class BaseModel:
     """
     defines all common attributes and methods for other classes
     """
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         """
         creates a BaseModel object
         """
-        self.id = str(uuid.uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = datetime.now()
+        if kwargs:
+            for key, value in kwargs.items():
+                if key != "__class__":
+                    setattr(self, key, value)
+            self.created_at = datetime.strptime(kwargs["created_at"], date)
+            self.updated_at = datetime.strptime(kwargs["updated_at"], date)
+        else:
+            self.id = str(uuid.uuid4())
+            self.created_at = datetime.now()
+            self.updated_at = datetime.now()
 
     def __str__(self):
         """
