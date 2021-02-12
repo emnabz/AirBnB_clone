@@ -15,8 +15,8 @@ class BaseModel:
         creates a BaseModel object
         """
         self.id = str(uuid.uuid4())
-        self.created_at = datetime.now.datetime.today()
-        self.updated_at = datetime.now.datetime.today()
+        self.created_at = datetime.now()
+        self.updated_at = datetime.now()
 
     def __str__(self):
         """
