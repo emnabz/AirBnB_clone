@@ -1,6 +1,6 @@
 #!/usr/bin/pythom3
 """
-city module
+city modules
 """
 from models.base_model import BaseModel
 
