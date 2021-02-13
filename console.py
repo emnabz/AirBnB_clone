@@ -1,20 +1,26 @@
 import cmd
-from baseModel import baseModel
+from baseModel import baseModel, place, state, city, Amenity, Review
+import models
 
 
 class HBNBcommand(cmd.Cmd):
     
-    intro = 'Welcome to the hbnb shell. Type help or ? to list commands.
     prompt = '(hbnb)'
     
-# ----- basic turtle commands -----
 def do_quit(self, arg):
-    'Quit command to exit the program\n'
+    """
+    Quit command to eit the program
+    """    
     return True
 
-def do_EOF(self,arg):
-    'Quit command to exit the program\n'
+def do_EOF(self, arg):
+    """
+    EOF command to exit the program
+    """
     return True
 
 def emptyline(self):
+    """
+    """
     pass
+
