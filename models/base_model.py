@@ -7,6 +7,7 @@ import uuid
 from datetime import datetime
 date = "%Y-%m-%dT%H:%M:%S.%f"
 
+
 class BaseModel:
     """
     defines all common attributes and methods for other classes
