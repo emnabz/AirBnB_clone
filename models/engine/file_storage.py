@@ -21,7 +21,7 @@ class FileStorage:
         """
         sets in __objects the obj with key <obj class name>.id
         """
-        key = obj.__class__.__name__ + "." + obj.id
+        key = obj.__class__.__name__ + '.' + obj.id
         self.__objects[key] = obj
 
     def save(self):
@@ -39,7 +39,7 @@ class FileStorage:
         try:
             with open(self.__file_path, 'r') as f:
                 objects_json = json.load(f)
-            for key in objects_json:
-                self.__objects[key] = objects_json[key]
+            for key, value in objects_json.items():
+                self.__objects[key] = eval(key.split('.')[0])(**value)
         except:
             pass

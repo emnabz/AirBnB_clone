@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 """
-Base module for Air BnB module
+BaseModel module
 """
+import models
 import uuid
 from datetime import datetime
-import models
 date = "%Y-%m-%dT%H:%M:%S.%f"
-
 
 class BaseModel:
     """
@@ -34,7 +33,7 @@ class BaseModel:
         string representation of the BaseModel class
         """
         return ("[{}] ({}) {})".format(
-            __class__.__name__,
+            self.__class__.__name__,
             self.id,
             self.__dict__))
 
