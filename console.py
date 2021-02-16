@@ -1,6 +1,6 @@
+#!/usr/bin/python3
 """ console"""
 import cmd
-from models import storage, class_models
 from datetime import datetime
 from models.base_model import BaseModel
 from models.place import Place
@@ -64,7 +64,7 @@ class HBNBCommand(cmd.Cmd):
                 
         if len(args) == 1:
             print("** instance id is missing **")            
-            else:
+        else:
                 print ("** class name missing **") 
     
     def do_destroy(self,args):
@@ -74,15 +74,15 @@ class HBNBCommand(cmd.Cmd):
         if len(args) == 2:
             if args[0] not in class_models:
                 print ("** class doesn't exist **")
-                else:
+            else:
                     instance_key = args[0] + '.' + args[1]
-                try:
-                    del (store[instance_key])
-                except:
-                    print ("** no instace found **")
+                    try:
+                        del (store[instance_key])
+                    except:
+                        print ("** no instace found **")
         if len(args) == 1:
             print ("** instance id is missing **")                    
-            else:
+        else:
                 print("** class name missing **")
 
     def do_all(self, name=""):
