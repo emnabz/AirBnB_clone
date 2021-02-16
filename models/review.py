@@ -4,6 +4,7 @@ Review models
 """
 from models.base_model import BaseModel
 
+
 class Review(BaseModel):
     place_id = ""
     user_id = ""
@@ -11,4 +12,3 @@ class Review(BaseModel):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        
