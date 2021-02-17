@@ -29,7 +29,6 @@ class HBNBCommand(cmd.Cmd):
             classe_name = cmnd
             cmnd = args[1: args.find('(')]
             args = args[args.find('(') + 1:-1]
-            args = args.replace(',', '')
             line = ' '.join([cmnd, classe_name, args])
         return line
 
