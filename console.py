@@ -154,5 +154,15 @@ class HBNBCommand(cmd.Cmd):
             line = ' '.join([command, class_name, args])
         return line
 
+    def do_count(self, arg):
+        """
+        Retrieves the number of instances of a class
+        """
+        nb_instances = 0
+        for k in models.storage.all().keys():
+            if arg in k:
+                nb_instances += 1
+        print(nb_instances)
+
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
