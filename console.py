@@ -20,6 +20,19 @@ class HBNBCommand(cmd.Cmd):
     """HBNH console"""
     prompt = '(hbnb) '
 
+    def precmd(self, line):
+        """
+        Hook method executed just before the command line line is interpreted
+        """
+        cmnd, args, line = self.parseline(line)
+        if cmnd in class_models:
+            classe_name = cmnd
+            cmnd = args[1: args.find('(')]
+            args = args[args.find('(') + 1:-1]
+            args = args.replace(',', '')
+            line = ' '.join([cmnd, classe_name, args])
+        return line
+
     def do_EOF(self, arg):
         """exit the program"""
         return True
@@ -54,7 +67,7 @@ class HBNBCommand(cmd.Cmd):
         if len(args) == 0:
             print("** class name missing **")
             return False
-        if args[0] in classes:
+        if args[0] in class_models:
             if len(args) > 1:
                 key = args[0] + "." + args[1]
                 if key in models.storage.all():
@@ -130,6 +143,16 @@ class HBNBCommand(cmd.Cmd):
                 storage.save()
                 return
         print("** no instance found **")
+
+    def do_count(self, arg):
+        """
+        Retrieves the number of instances of a class
+        """
+        count = 0
+        for key in models.storage.all().keys():
+            if arg in key:
+                count += 1
+        print(count)
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
