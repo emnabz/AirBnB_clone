@@ -3,7 +3,7 @@
 
 import cmd
 from models.base_model import BaseModel
-import shlex # for splitting the line along spaces except in double quotes
+import shlex
 import models
 from models import storage
 from models.amenity import Amenity
@@ -13,7 +13,7 @@ from models.review import Review
 from models.state import State
 from models.user import User
 classes = {"BaseModel": BaseModel, "User": User, "Amenity": Amenity,
-                "City": City, "Place": Place, "Review": Review, "State": State}
+           "City": City, "Place": Place, "Review": Review, "State": State}
 
 
 class HBNBCommand(cmd.Cmd):
@@ -84,7 +84,7 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** class doesn't exist **")
 
-    def do_all(self,arg):
+    def do_all(self, arg):
         """Prints string representations of instances"""
         args = shlex.split(arg)
         obj_list = []
@@ -141,6 +141,18 @@ class HBNBCommand(cmd.Cmd):
                 print("** instance id missing **")
         else:
             print("** class doesn't exist **")
+
+    def precmd(self, arg):
+        """
+        Hook method executed just before the command line is interpreted
+        """
+        command, args, line = self.parseline(arg)
+        if command in classes:
+            class_name = command
+            command = args[1: args.find('(')]
+            args = args[args.find('(') + 1:-1]
+            line = ' '.join([command, class_name, args])
+        return line
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
