@@ -1,7 +1,6 @@
 # AirBnB_clone - The console
 
 ---
-![HBnB](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20210217%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210217T165419Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=ff9c52e15cb373c456a50519af5fed0c03997dc541a0b64225c29778e3ff95a9)
 
 ## Description of the project
 
@@ -41,3 +40,8 @@ The following commands have been implemented:
 ## Environment
 
 This project is interpreted/tested on Ubuntu 14.04 LTS using python3 (version 3.4.3).
+
+## Authors
+
+Emna Bouaziz-[Github](https://github.com/emnabz)
+Mohamed Foued jenni [Github](https://github.com/Jenni-Foued)
