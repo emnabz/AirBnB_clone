@@ -151,6 +151,7 @@ class HBNBCommand(cmd.Cmd):
             class_name = command
             command = args[1: args.find('(')]
             args = args[args.find('(') + 1:-1]
+            args = args.translate({ord(','): None})
             line = ' '.join([command, class_name, args])
         return line
 
