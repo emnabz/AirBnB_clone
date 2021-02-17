@@ -31,8 +31,8 @@ class HBNBCommand(cmd.Cmd):
         if len(args) == 0:
             print("** class name missing **")
             return False
-        if args[0] in classes:
-            instance = classes[args[0]]()
+        if args[0] in class_models:
+            instance = class_models[args[0]]()
         else:
             print("** class doesn't exist **")
             return False
