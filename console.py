@@ -6,7 +6,14 @@ from models.base_model import BaseModel
 from shlex import split
 import models
 from models import storage
-class_models = {"BaseModel": BaseModel}
+from models.amenity import Amenity
+from models.city import City
+from models.place import Place
+from models.review import Review
+from models.state import State
+from models.user import User
+class_models = {"BaseModel": BaseModel, "User": User, "Amenity": Amenity,
+                "City": City, "Place": Place, "Review": Review, "State": State}
 
 
 class HBNBCommand(cmd.Cmd):
